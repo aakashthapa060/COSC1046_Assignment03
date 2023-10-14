@@ -6,12 +6,18 @@ public class Main {
 
         System.out.println("Enter Sales Amount: ");
         double amount = input.nextDouble();
+
         double validatedAmount = validateInput(amount);
+
+        // Display the calculated sales Commission
         double salesCommission = calculateSalesCommission(validatedAmount);
         System.out.println("The commission is $" + salesCommission + " for sales amount of $" + validatedAmount);
 
     }
 
+    /*
+     * Function to Validate given amount
+     */
     public static double validateInput(double num) {
         Scanner input = new Scanner(System.in);
         while (num < 1) {
@@ -21,6 +27,7 @@ public class Main {
         return num;
     }
 
+    // Function to calculate sales amount based on commission
     public static double calculateSalesCommission(double salesAmount) {
         int commissionRate;
 
