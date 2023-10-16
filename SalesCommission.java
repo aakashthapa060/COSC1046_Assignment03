@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class SalesCommission {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -31,17 +31,16 @@ public class Main {
     public static double calculateSalesCommission(double salesAmount) {
         int commissionRate;
 
-        if (salesAmount < 5000) {
+        if (salesAmount <= 5000) {
             commissionRate = 8;
-        } else if (salesAmount >= 5001 && salesAmount <= 10000) {
+        } else if (salesAmount <= 10000) {
             commissionRate = 10;
         } else {
             commissionRate = 12;
 
         }
 
-        double salesCommission = (salesAmount / 100) * commissionRate;
-
+        double salesCommission = (salesAmount * commissionRate) / 100;
         return salesCommission;
     }
 
