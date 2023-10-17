@@ -11,6 +11,9 @@ public class SalesAmount {
     public static double validateInput() {
         Scanner input = new Scanner(System.in);
 
+        /*
+         * Ask for input and validate if the user inputs amount lesser than 1
+         */
         System.out.println("Enter Sales Amount: ");
         double amount = input.nextDouble();
         while (amount < 1) {
@@ -36,6 +39,3 @@ public class SalesAmount {
         return salesAmount;
     }
 }
-
-// 400
-// 1000
